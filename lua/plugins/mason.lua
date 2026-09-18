@@ -18,7 +18,10 @@ return {
         "neovim/nvim-lspconfig",
     },
     opts = {
-      ensure_installed = { "pyright", "rust_analyzer", "texlab" },
+      ensure_installed = { "clangd", "jdtls", "pyright", "rust_analyzer", "texlab" },
+      -- jdtls is started per-project by ftplugin/java.lua (nvim-jdtls). Letting
+      -- mason-lspconfig enable it too would attach two clients to every java buffer.
+      automatic_enable = { exclude = { "jdtls" } },
     },
   },
   {

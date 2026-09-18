@@ -14,5 +14,5 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 
-require("lazy").setup("plugins", opts)
+require("lazy").setup("plugins")
 require("config.snippets")

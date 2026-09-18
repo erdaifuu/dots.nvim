@@ -1,0 +1,4 @@
+# nvim writes these into the config dir; they are machine-local state, not config.
+spell/
+sessions/
+*.log
